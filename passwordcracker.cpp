@@ -70,7 +70,7 @@ void process(string file_name, const string& hash_password, int startline, int e
 }
 
 void usage() {
-  cout << "usage: ./passwordcracker <hash> <password_file>\n";
+  cout << "usage: ./passwordcracker <hash> <wordlist>\n";
 }
 int main(int argc, char** argv) {
 

@@ -2,10 +2,10 @@
 This is a Bcrypt hash cracker that can be used to crack passwords. It scans the wordlist concurrently and matches it with the given hash string. It uses 4 threads by default but it can use any number of threads you want by changing the `THREAD_COUNT` macro definition in the source file. Bcrypt is the most used hashing algorithm used for storing passwords so I decided to implement a bcrypt hash cracker but it can be swapped out with any hashing algorithm with few modifications to the code.
 
 ## Dependency
-This program uses (libbcrypt)[https://github.com/trusch/libbcrypt] which needs to be installed for this to compile. You can visit their github repo for installation instructions.
+This program uses [libbcrypt](https://github.com/trusch/libbcrypt) which needs to be installed for this to compile. You can visit their github repo for installation instructions.
 
 ## Compilation
-Make sure you have C++ 17.
+Make sure you have C++ 17 and [libbcrypt](https://github.com/trusch/libbcrypt).
 ```
 make
 ```
@@ -40,3 +40,6 @@ iloveu matched!
 hash $2a$15$9643u9dzSB9miuEBzu0Ko.EgANDVaoK/rZl3Xte.wXA/tZb9yLwVy found in the file rockyou-200.txt
 $2a$15$9643u9dzSB9miuEBzu0Ko.EgANDVaoK/rZl3Xte.wXA/tZb9yLwVy - iloveu
 ```
+
+## Wordlist
+The most used wordlist is rockyou.txt with over 14.3 million passwords. There are better wordlist but this one is easily findable. You can download it [here](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt)
